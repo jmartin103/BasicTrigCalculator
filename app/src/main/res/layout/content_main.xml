@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main"
+    tools:context="com.demos.jackhammer.trigcalculator.MainActivity"
+    android:background="#ed0000ff">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Enter an angle:"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/angle"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/result"
+        android:layout_alignLeft="@+id/angle"
+        android:id="@+id/radioGroup">
+        <RadioButton android:id="@+id/degreeMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Degrees"
+            android:onClick="onRadioButtonClicked"
+            android:checked="true"/>
+        <RadioButton android:id="@+id/radianMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radians"
+            android:onClick="onRadioButtonClicked"
+            android:checked="false"/>
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/result"
+        android:background="#ffffff"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/angle"
+        android:layout_alignStart="@+id/angle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Result:"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/angle"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sin"
+        android:id="@+id/sinButton"
+        android:onClick="sinButtonClick"
+        android:layout_below="@+id/radioGroup"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aSinButton"
+        android:layout_alignTop="@+id/sinButton"
+        android:layout_toRightOf="@+id/sinButton"
+        android:layout_toEndOf="@+id/sinButton"
+        android:text="arcsin"
+        android:onClick="aSinButtonClick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cos"
+        android:id="@+id/cosButton"
+        android:layout_below="@+id/sinButton"
+        android:layout_alignLeft="@+id/sinButton"
+        android:layout_alignStart="@+id/sinButton"
+        android:onClick="cosButtonClick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="arccos"
+        android:id="@+id/aCosButton"
+        android:layout_alignTop="@+id/cosButton"
+        android:layout_toRightOf="@+id/cosButton"
+        android:layout_toEndOf="@+id/cosButton"
+        android:onClick="aCosButtonClick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tan"
+        android:id="@+id/tanButton"
+        android:layout_below="@+id/cosButton"
+        android:layout_alignLeft="@+id/cosButton"
+        android:layout_alignStart="@+id/cosButton"
+        android:onClick="tanButtonClick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="arctan"
+        android:id="@+id/aTanButton"
+        android:layout_below="@+id/cosButton"
+        android:layout_toRightOf="@+id/cosButton"
+        android:layout_toEndOf="@+id/cosButton"
+        android:onClick="aTanButtonClick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sec"
+        android:id="@+id/secButton"
+        android:layout_above="@+id/aCosButton"
+        android:layout_toRightOf="@+id/aSinButton"
+        android:layout_toEndOf="@+id/aSinButton"
+        android:onClick="secButtonClick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="csc"
+        android:id="@+id/cscButton"
+        android:layout_alignTop="@+id/aCosButton"
+        android:layout_toRightOf="@+id/aCosButton"
+        android:layout_toEndOf="@+id/aCosButton"
+        android:onClick="cscButtonClick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cot"
+        android:id="@+id/cotButton"
+        android:layout_alignBottom="@+id/aTanButton"
+        android:layout_toRightOf="@+id/aTanButton"
+        android:layout_toEndOf="@+id/aTanButton"
+        android:onClick="cotButtonClick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Law of Sines/Cosines"
+        android:id="@+id/lawSinCos"
+        android:onClick="goToLawActivity"
+        android:layout_below="@+id/tanButton"
+        android:layout_alignLeft="@+id/tanButton"
+        android:layout_alignStart="@+id/tanButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Coterminal Angles"
+        android:id="@+id/coterminal"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/lawSinCos"
+        android:layout_alignLeft="@id/lawSinCos"
+        android:layout_alignRight="@+id/lawSinCos"
+        android:onClick="goToCoterminal"/>
+
+</RelativeLayout>

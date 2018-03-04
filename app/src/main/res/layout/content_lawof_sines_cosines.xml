@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.demos.jackhammer.trigcalculator.LawofSinesCosines"
+    tools:showIn="@layout/activity_lawof_sines_cosines"
+    android:background="#0000ff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="a:"
+        android:id="@+id/sALabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="53dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="b:"
+        android:id="@+id/sBLabel"
+        android:layout_below="@+id/sALabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="34dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="c:"
+        android:id="@+id/sCLabel"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/sBLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="5"
+        android:id="@+id/sideA"
+        android:layout_above="@+id/sBLabel"
+        android:layout_toRightOf="@+id/sALabel"
+        android:background="#ffffff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="5"
+        android:id="@+id/sideB"
+        android:layout_alignBottom="@+id/sBLabel"
+        android:layout_alignLeft="@+id/sideA"
+        android:layout_alignStart="@+id/sideA"
+        android:background="#ffffff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="5"
+        android:id="@+id/sideC"
+        android:background="#ffffff"
+        android:layout_alignTop="@+id/sCLabel"
+        android:layout_alignLeft="@+id/sideB"
+        android:layout_alignStart="@+id/sideB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="A:"
+        android:id="@+id/aALabel"
+        android:layout_alignBottom="@+id/angleA"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="B:"
+        android:id="@+id/aBLabel"
+        android:layout_alignBottom="@+id/sideB"
+        android:layout_alignLeft="@+id/aALabel"
+        android:layout_alignStart="@+id/aALabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="C:"
+        android:id="@+id/aCLabel"
+        android:layout_alignTop="@+id/sideC"
+        android:layout_alignLeft="@+id/aBLabel"
+        android:layout_alignStart="@+id/aBLabel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="5"
+        android:id="@+id/angleA"
+        android:layout_above="@+id/sBLabel"
+        android:layout_toRightOf="@+id/aBLabel"
+        android:layout_toEndOf="@+id/aBLabel"
+        android:background="#ffffff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="5"
+        android:id="@+id/angleB"
+        android:layout_alignBottom="@+id/aBLabel"
+        android:layout_toRightOf="@+id/aALabel"
+        android:layout_toEndOf="@+id/aALabel"
+        android:background="#ffffff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="5"
+        android:id="@+id/angleC"
+        android:layout_alignBottom="@+id/aCLabel"
+        android:layout_toRightOf="@+id/aCLabel"
+        android:layout_toEndOf="@+id/aCLabel"
+        android:background="#ffffff" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/result"
+        android:layout_alignLeft="@+id/angle"
+        android:id="@+id/radioGroup">
+        <RadioButton android:id="@+id/degreeMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Degrees"
+            android:onClick="onRadioButtonClicked"
+            android:checked="true"/>
+        <RadioButton android:id="@+id/radianMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radians"
+            android:onClick="onRadioButtonClicked"
+            android:checked="false"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate!"
+        android:id="@+id/calculate"
+        android:onClick="calculateClick"
+        android:layout_below="@+id/aCLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sides:"
+        android:id="@+id/sideLabel"
+        android:layout_above="@+id/sideA"
+        android:layout_alignLeft="@+id/sideA"
+        android:layout_alignStart="@+id/sideA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Angles:"
+        android:id="@+id/angleLabel"
+        android:layout_alignTop="@+id/sideLabel"
+        android:layout_toRightOf="@+id/aALabel"
+        android:layout_toEndOf="@+id/aALabel" />
+</RelativeLayout>

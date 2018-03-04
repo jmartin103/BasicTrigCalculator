@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.demos.jackhammer.trigcalculator.Coterminal"
+    tools:showIn="@layout/activity_coterminal"
+    android:background="#0000ff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter an angle:"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:ems="10"
+        android:id="@+id/angInput"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Positive"
+        android:id="@+id/calculatePosAngle"
+        android:layout_below="@+id/angInput"
+        android:layout_alignLeft="@+id/angInput"
+        android:layout_alignStart="@+id/angInput"
+        android:onClick="calcPosAngleClick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Negative"
+        android:id="@+id/calculateNegAngle"
+        android:layout_below="@+id/angInput"
+        android:layout_toRightOf="@+id/calculatePosAngle"
+        android:layout_toEndOf="@+id/calculatePosAngle"
+        android:onClick="calcNegAngleClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Coterminal Angle:"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/calculatePosAngle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:ems="10"
+        android:id="@+id/angOutput"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/button_reset"
+        android:layout_below="@+id/angOutput"
+        android:layout_centerHorizontal="true"
+        android:onClick="resetButtonClick" />
+</RelativeLayout>
