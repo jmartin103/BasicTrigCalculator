@@ -1,1 +1,3 @@
 # BasicTrigCalculator
+
+An Android application to calculate basic trigonometric functions. This performs simple calculations, such as sine, cosine, and tangent, as well as more complex calculations, such as arcsine, arccosine, arctangent, secant, cosecant, and cotangent. The application allows the user to calculate in both degrees and radians. Furthermore, the application performs Law of Sines calculations with three missing sides, printing out the resulting angles. Then, this calculator calculates the next co-terminal angle by adding 360 to a user-given angle (in degrees) for a positive co-terminal, or subtracting 360 from the angle for the next negative co-terminal angle.
